@@ -1,0 +1,49 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sessions/new.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="" method="">
+    <label for="room-select">Room:</label>
+    <select name="room" id="room-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+    <label for="drinks-select">Drinks:</label>
+    <select name="drinks" id="drinks-select">
+      <option value="Water Bottle">Water Bottle</option>
+      <option value="Sparkling Water">Sparkling Water</option>
+      <option value="Tea">Tea</option>
+      <option value="Coffee">Coffee</option>
+    </select>
+    <select name="snacks" id="snacks-select">
+      <option value="Cookies">Cookies</option>
+      <option value="Chips">Chips</option>
+      <option value="Fruit Bowl">Fruit Bowl</option>
+      <option value="Trail Mix">Trail Mix</option>
+    </select>
+    <button type="submit">Add to Session Package</button>
+  </form>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("../partials/footer") %>

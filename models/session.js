@@ -14,12 +14,14 @@ const sessionSchema = new Schema({
     enum:['Cookies', 'Chips','Fruit Bowl', 'Trail Mix']
   },
   personBooking: {type: Schema.Types.ObjectId, ref: 'Profile'},
-  instruments: {type: Schema.Types.ObjectId, ref: 'Instrument'}
+  instruments: {
+    type: Schema.Types.ObjectId, ref: 'Instrument'}, 
+}, {
+  timestamps: true
 })
 
 
-
-const Session = mongoose.model('Session', userSchema)
+const Session = mongoose.model('Session', sessionSchema)
 
 export {
   Session
