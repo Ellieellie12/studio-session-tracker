@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+
+<main>
+  <h1>My Sessions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Rooms</th>
+        <th>Drinks</th>
+        <th>Snacks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sessions.forEach(session => { %>
+      <tr>
+          <td><%= session.room %></td>
+          <td><%= session.drinks %></td>
+          <td><%= session.snacks %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>
