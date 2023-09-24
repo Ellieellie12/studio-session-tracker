@@ -8,19 +8,24 @@ const router = Router()
 
 // localhost:3000/sessions
 router.get('/', isLoggedIn, sessionsCtrl.index)
+
 // localhost:3000/sessions/new
-router.get('/new', sessionsCtrl.new)
+router.get('/new', isLoggedIn, sessionsCtrl.new)
 
 // localhost:3000/sessions
 router.post('/', isLoggedIn, sessionsCtrl.create)
+
 // localhost:3000/sessions
-router.get('/:sessionId', sessionsCtrl.show)
+router.get('/:sessionId', isLoggedIn, sessionsCtrl.show)
+
 // localhost:3000/sessions/sessionId/edit
-router.get('/:sessionId/edit', sessionsCtrl.edit)
-// localhost:3000/sessions.sessionsId
-router.put('/:sessionId', sessionsCtrl.update)
+router.get('/:sessionId/edit', isLoggedIn, sessionsCtrl.edit)
+
 // localhost:3000/sessions/sessionsId
-router.delete('/:sessionId', sessionsCtrl.delete)
+router.put('/:sessionId', isLoggedIn, sessionsCtrl.update)
+
+// localhost:3000/sessions/sessionsId
+router.delete('/:sessionId', isLoggedIn, sessionsCtrl.delete)
 
 export {
   router

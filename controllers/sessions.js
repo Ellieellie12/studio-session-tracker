@@ -40,16 +40,21 @@ function index(req, res) {
 function show(req, res) {
   Session.findById(req.params.sessionId)
   .then(session => {
-    res.render('sessions/show',{
-      title: 'Session Detail',
-      session: session
+    if (session.personBooking.equals(req.user.profile._id)) {
+        res.render('sessions/show',{
+          title: 'Session Detail',
+          session: session
+        }) 
+      } else {
+        throw new Error('Not authorized')
+      }
     })
-  })
-  .catch(err=> {
+  .catch(err => {
     console.log(err)
     res.redirect('/sessions')
   })
 }
+
 
 
 function deleteSession(req, res) {

@@ -5,17 +5,23 @@
 <main>
   <h1><%= title %></h1>
   <section>
+    <p>Thank you for booking <%= session.personBooking.name %>...</p>
+  </section>
+  <section>
     <div>Room: </div>
     <div><%= session.room %></div>
     <div>Drinks: </div>
     <div><%= session.drinks %></div>
     <div>Snacks: </div>
     <div><%= session.snacks %></div>
-    <div> <a href="/sessions/<%= session._id %>/edit">
+    <div> 
+      <a href="/sessions/<%= session._id %>/edit">
         <button>Edit Session</button>
-        </a>
+        </a> 
     </div>
+  
   </section>
+
 </main>
   
 <%- include('../partials/footer') %>
