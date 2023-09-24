@@ -1,0 +1,17 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sessions/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <section>
+    <div>Room: </div>
+    <div><%= session.room %></div>
+    <div>Drinks: </div>
+    <div><%= session.drinks %></div>
+    <div>Snacks: </div>
+    <div><%= session.snacks %></div>
+  </section>
+</main>
+  
+<%- include('../partials/footer') %>

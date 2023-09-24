@@ -33,10 +33,23 @@ function index(req, res) {
   })
   .catch(err=> {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/sessions')
   })
 }
 
+function show(req, res) {
+  Session.findById(req.params.sessionId)
+  .then(session => {
+    res.render('sessions/show',{
+      title: 'Session Detail',
+      session: session
+    })
+  })
+  .catch(err=> {
+    console.log(err)
+    res.redirect('/sessions')
+  })
+}
 
 
 export {
