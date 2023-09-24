@@ -38,10 +38,12 @@ function index(req, res) {
 }
 
 
+
 export {
   newSession as new,
   create,
-  index
+  index,
+  show
 }
 
 
