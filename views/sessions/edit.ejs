@@ -8,6 +8,7 @@
   <form id="new-form" action="/sessions/<%= session._id %>?_method=PUT" method="POST">
     <label for="room-select">Rooms:</label>
     <select name="room" id="room-select">
+      <option value="<%= session.room %>"><%= session.room %></option>
       <option value="1">Room 1</option>
       <option value="2">Room 2</option>
       <option value="3">Room 3</option>
@@ -18,6 +19,7 @@
     </select>
     <label for="drinks-select">Drinks:</label>
     <select name="drinks" id="drinks-select">
+      <option value="<%= session.drinks %>"><%= session.drinks %></option>
       <option value="Bottled Water">Bottled Water</option>
       <option value="Sparkling Water">Sparkling Water</option>
       <option value="Tea">Tea</option>
@@ -25,6 +27,7 @@
     </select>
     <label for="snacks-select">Snacks:</label>
     <select name="snacks" id="snacks-select">
+      <option value="<%= session.snacks %>"><%= session.snacks %></option>
       <option value="Cookies">Cookies</option>
       <option value="Chips">Chips</option>
       <option value="Fruit Bowl">Fruit Bowl</option>

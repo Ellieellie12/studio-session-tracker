@@ -76,6 +76,7 @@ function deleteSession(req, res) {
 function edit(req, res) {
   Session.findById(req.params.sessionId)
   .then(session => {
+    console.log(session)
     res.render('sessions/edit', {
       session,
       title:'Edit Session'
@@ -88,13 +89,14 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Session.findById(req.params.sessionId, req.body, {new: true})
+  Session.findByIdAndUpdate(req.params.sessionId, req.body, {new:true})
   .then(session => {
+    console.log(req.body)
     res.redirect(`/sessions/${session._id}`)
   })
   .catch(err => {
     console.log(err)
-      res.redirect('/sessions')
+      res.redirect('/sessions/')
   })
 }
 
