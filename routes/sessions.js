@@ -17,6 +17,8 @@ router.post('/', isLoggedIn, sessionsCtrl.create)
 router.get('/:sessionId', sessionsCtrl.show)
 // localhost:3000/sessions/sessionId/edit
 router.get('/:sessionId/edit', sessionsCtrl.edit)
+// localhost:3000/sessions.sessionsId
+router.put('/:sessionId', sessionsCtrl.update)
 // localhost:3000/sessions/sessionsId
 router.delete('/:sessionId', sessionsCtrl.delete)
 
