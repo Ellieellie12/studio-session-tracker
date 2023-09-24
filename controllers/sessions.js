@@ -52,11 +52,23 @@ function show(req, res) {
 }
 
 
+function deleteSession(req, res) {
+  Session.findByIdAndDelete(req.params.sessionId)
+  .then(session => {
+    res.redirect('/sessions')
+  })
+  .catch(err=> {
+    console.log(err)
+    res.redirect('/sessions')
+  })
+}
+
 export {
   newSession as new,
   create,
   index,
-  show
+  show,
+  deleteSession as delete
 }
 
 
