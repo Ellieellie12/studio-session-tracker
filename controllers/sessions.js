@@ -63,23 +63,26 @@ function deleteSession(req, res) {
   })
 }
 
+function edit(req, res) {
+  Session.findById(req.params.sessionId)
+  .then(session => {
+    res.render('sessions/edit', {
+      session,
+      title:'Edit Session'
+    })
+  })
+  .catch(err=> {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newSession as new,
   create,
   index,
   show,
+  edit,
   deleteSession as delete
 }
 
-
-
-
-
-// Session.create(req.body)
-// .then(session => {
-//   res.redirect('sessions/new')
-// })
-// .catch(err => {
-//   console.log(err)
-//   res.redirect('/sessions/new')
-// })
