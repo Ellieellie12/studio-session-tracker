@@ -14,6 +14,7 @@ router.get('/new', sessionsCtrl.new)
 router.post('/', isLoggedIn, sessionsCtrl.create)
 
 router.get('/:sessionId', sessionsCtrl.show)
+router.delete('sessionId', sessionsCtrl.delete)
 
 export {
   router

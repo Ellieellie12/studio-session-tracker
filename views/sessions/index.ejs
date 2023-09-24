@@ -19,6 +19,11 @@
           <td><%= session.drinks %></td>
           <td><%= session.snacks %></td>
           <td><a href="/sessions/<%= session._id %>">DETAILS</a></td>
+          <td>
+            <form action="/sessions/ <%=session._id %>?_method=DELETE" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
         </tr>
         <% }) %>
     </tbody>
