@@ -73,16 +73,30 @@ function edit(req, res) {
   })
   .catch(err=> {
     console.log(err)
-    res.redirect('/')
+    res.redirect('/sessions')
   })
 }
+
+function update(req, res) {
+  Session.findById(req.params.sessionId, req.body, {new: true})
+  .then(session => {
+    res.redirect(`/sessions/${session._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+      res.redirect('/sessions')
+  })
+}
+
+
 
 export {
   newSession as new,
   create,
   index,
   show,
+  deleteSession as delete,
   edit,
-  deleteSession as delete
+  update,
 }
 

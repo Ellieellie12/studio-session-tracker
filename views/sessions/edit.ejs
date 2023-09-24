@@ -5,8 +5,7 @@
 <main>
   <h1><%= title %></h1>
   <% if (user) { %>
-  <form id="new-form" action="/sessions/<%= session._id %>?_method="PUT"
-    method="POST">
+  <form id="new-form" action="/sessions/<%= session._id %>?_method=PUT" method="POST">
     <label for="room-select">Rooms:</label>
     <select name="room" id="room-select">
       <option value="1">Room 1</option>
@@ -35,3 +34,5 @@
   </form>
   <% } %>
 </main>
+
+<%- include('../partials/footer') %>
