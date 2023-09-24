@@ -5,11 +5,11 @@ const Schema = mongoose.Schema
 const sessionSchema = new Schema({
   room: {
     type: Number, min:1, max:7},
-  drinks: {
+  drink: {
     type: String, 
     enum:['Bottled Water', 'Sparkling Water', 'Tea', 'Coffee']
   },
-  snacks: {
+  snack: {
     type: String,
     enum:['Cookies', 'Chips','Fruit Bowl', 'Trail Mix']
   },
