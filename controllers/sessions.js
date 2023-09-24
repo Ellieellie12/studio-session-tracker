@@ -60,13 +60,18 @@ function show(req, res) {
 function deleteSession(req, res) {
   Session.findByIdAndDelete(req.params.sessionId)
   .then(session => {
-    res.redirect('/sessions')
+    if (session.personBooking.equals(req.user.profile._id)) {
+      res.redirect('/sessions')
+    } else {
+      throw new Error('Not Authorized')
+    }
   })
   .catch(err=> {
     console.log(err)
     res.redirect('/sessions')
   })
 }
+
 
 function edit(req, res) {
   Session.findById(req.params.sessionId)
