@@ -1,4 +1,5 @@
 import { Session } from "../models/session.js";
+import { Instrument } from "../models/instrument.js";
 
 
 function newSession(req, res) {
@@ -13,6 +14,7 @@ function newSession(req, res) {
     req.body.personBooking = req.user.profile._id
     Session.create(req.body)
     .then(session => {
+      console.log('this is the create session: ', session)
       res.redirect(`/sessions/${session._id}`)
     })
     .catch(err=> {
@@ -38,17 +40,17 @@ function index(req, res) {
 }
 
 function show(req, res) {
+  console.log(req.user.profile._id)
   Session.findById(req.params.sessionId)
+  .populate(['instruments', 'personBooking' ])
   .then(session => {
-    if (session.personBooking.equals(req.user.profile._id)) {
+    console.log('this is a show session: ', session)
         res.render('sessions/show',{
           title: 'Session Detail',
-          session: session
+          session: session,
+          currUserId: req.user.profile._id
         }) 
-      } else {
-        throw new Error('Not authorized')
-      }
-    })
+      })
   .catch(err => {
     console.log(err)
     res.redirect('/sessions')

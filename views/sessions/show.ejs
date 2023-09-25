@@ -4,6 +4,7 @@
 
 <main>
   <h1><%= title %></h1>
+  <% if (session.personBooking._id.equals(currUserId)) { %>
   <section>
     <p>Thank you for booking <%= session.personBooking.name %>...</p>
   </section>
@@ -19,7 +20,10 @@
         <button>Edit Session</button>
         </a> 
     </div>
-  
+  <% } else { %>
+    <h1> Not Authorized </h1>
+  <% } %>
+
   </section>
 
 </main>
