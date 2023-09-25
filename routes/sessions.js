@@ -24,6 +24,7 @@ router.get('/:sessionId/edit', isLoggedIn, sessionsCtrl.edit)
 // localhost:3000/sessions/sessionsId
 router.put('/:sessionId', isLoggedIn, sessionsCtrl.update)
 
+router.post('/:sessionId/instruments', sessionsCtrl.addInstrument)
 // localhost:3000/sessions/sessionsId
 router.delete('/:sessionId', isLoggedIn, sessionsCtrl.delete)
 

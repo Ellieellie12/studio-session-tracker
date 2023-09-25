@@ -20,12 +20,25 @@
         <button>Edit Session</button>
         </a> 
     </div>
+    <div> Instruments:</div>
+    <ul>
+      <% session.instruments.forEach(instrumentChoice => { %>
+        <li><%= instrumentChoice.name %></li>
+        <% }) %>
+    </ul>
+  
+    <form id="add-to-instrument" action="/sessions/<%= session._id  %>/instruments" method="POST">
+    <select name="instrumentId">
+      <% instruments.forEach(instrument => { %>
+        <option value="<%= instrument._id %>"><%= instrument.name %></option>
+      <% }) %>
+    </select>
+    <button type="submit">Add Instrument</button>
+    </form>
   <% } else { %>
     <h1> Not Authorized </h1>
   <% } %>
-
   </section>
-
 </main>
   
 <%- include('../partials/footer') %>

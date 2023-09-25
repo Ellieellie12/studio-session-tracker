@@ -44,11 +44,16 @@ function show(req, res) {
   Session.findById(req.params.sessionId)
   .populate(['instruments', 'personBooking' ])
   .then(session => {
+    Instrument.find({_id: {$nin: session.instruments}})
+    .then(instruments => {
+    //get all the instruments from the instrument model and then pass that in the render as instruments and in order to do that i would need to have access to the instrument model and add a .then after that. nested .thens
     console.log('this is a show session: ', session)
         res.render('sessions/show',{
           title: 'Session Detail',
           session: session,
+          instruments: instruments,
           currUserId: req.user.profile._id
+        })
         }) 
       })
   .catch(err => {
@@ -108,6 +113,25 @@ function update(req, res) {
   })
 }
 
+function addInstrument(req, res) {
+  Session.findById(req.params.sessionId)
+  .then (session => {
+    session.instruments.push(req.body.instrumentId)
+    session.save()
+    .then(() => {
+      res.redirect(`/sessions/${session._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/sessions')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/sessions')
+  })
+}
+
 
 
 export {
@@ -118,5 +142,6 @@ export {
   deleteSession as delete,
   edit,
   update,
+  addInstrument
 }
 
