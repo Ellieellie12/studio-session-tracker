@@ -14,7 +14,7 @@ const sessionSchema = new Schema({
     enum:['Cookies', 'Chips','Fruit Bowl', 'Trail Mix']
   },
   personBooking: {type: Schema.Types.ObjectId, ref: 'Profile'},
-  instruments: {
+  instrument: {
     type: Schema.Types.ObjectId, ref: 'Instrument'}, 
 }, {
   timestamps: true

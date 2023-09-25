@@ -13,7 +13,7 @@ function newSession(req, res) {
     req.body.personBooking = req.user.profile._id
     Session.create(req.body)
     .then(session => {
-      res.redirect('/sessions')
+      res.redirect(`/sessions/${session._id}`)
     })
     .catch(err=> {
       console.log(err)
