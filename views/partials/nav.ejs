@@ -5,7 +5,9 @@
 <body>
   <nav>
     <a href="/sessions/new" class= <%= title === "Book Sessions" ? "active" : "" %> >Book Sessions</a>
-    <!-- <a href="sessions/instruments" -->
+    <a 
+    href="/instruments/new"
+    class=<%= title === 'Add Instrument to Booking' ? 'active' : '' %>>Add Instruments to Booking</a>
     <a href="/sessions" class= <%= title === "My Sessions" ? "active" : "" %> >My Sessions</a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
