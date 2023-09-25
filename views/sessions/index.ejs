@@ -4,6 +4,7 @@
 
 <main>
   <h1>My Sessions</h1>
+  <% if (user) %>
   <table>
     <thead>
       <tr>
@@ -14,7 +15,8 @@
     </thead>
     <tbody>
       <% sessions.forEach(session => { %>
-      <tr>
+        <tr>
+          <% if (session.personBooking.equals(user.profile._id)) { %>
           <td><%= session.room %></td>
           <td><%= session.drink %></td>
           <td><%= session.snack %></td>
@@ -25,7 +27,8 @@
             </form>
           </td>
         </tr>
-        <% }) %>
+        <% } %>
+    <% }) %>
     </tbody>
   </table>
 </main>
