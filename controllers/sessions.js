@@ -78,10 +78,14 @@ function deleteSession(req, res) {
 function edit(req, res) {
   Session.findById(req.params.sessionId)
   .then(session => {
+    if (session.personBooking.equals(req.user.profile._id)) {
     res.render('sessions/edit', {
       session,
       title:'Edit Session'
     })
+    } else {
+      throw new Error('Not Authorized')
+    }
   })
   .catch(err=> {
     console.log(err)
