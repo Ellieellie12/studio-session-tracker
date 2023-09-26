@@ -6,6 +6,8 @@
   <h1><%= title %></h1>
   <% if (user) { %>
   <form id="new-form" action="/sessions" method="POST">
+    <div class="session-container">
+      <div class="session-option">
     <label for="room-select">Rooms:</label>
     <select name="room" id="room-select">
       <option value="1">Room 1</option>
@@ -16,6 +18,8 @@
       <option value="6">Room 6</option>
       <option value="7">Room 7</option>
     </select>
+    </div>
+    <div class="session-option">
     <label for="drink-select">Drinks:</label>
     <select name="drink" id="drink-select">
       <option value="Bottled Water">Bottled Water</option>
@@ -23,6 +27,8 @@
       <option value="Tea">Tea</option>
       <option value="Coffee">Coffee</option>
     </select>
+    </div>
+    <div class="session-option">
     <label for="snack-select">Snacks:</label>
     <select name="snack" id="snack-select">
       <option value="Cookies">Cookies</option>
@@ -30,7 +36,9 @@
       <option value="Fruit Bowl">Fruit Bowl</option>
       <option value="Trail Mix">Trail Mix</option>
     </select>
+   </div>
     <button type="submit">Add to Session Package</button>
+  </div>
   </form>
   <% } %>
 </main>

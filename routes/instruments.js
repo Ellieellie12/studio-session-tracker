@@ -8,7 +8,6 @@ router.get('/new', isLoggedIn, instrumentsCtrl.new)
 router.post('/', instrumentsCtrl.create)
 
 
-
 export {
   router
 }

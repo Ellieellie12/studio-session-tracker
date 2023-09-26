@@ -1,8 +1,6 @@
 import { Router } from 'express'
 import * as sessionsCtrl from '../controllers/sessions.js'
 import { isLoggedIn } from '../middleware/middleware.js'
-// import { session } from 'passport'
-
 
 const router = Router()
 

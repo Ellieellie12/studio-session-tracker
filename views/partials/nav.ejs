@@ -4,14 +4,20 @@
 </head>
 <body>
   <nav>
+    <div class="link-container">
+      <div class="nav-link">
     <a href="/sessions/new" class= <%= title === "Book Sessions" ? "active" : "" %> >Book Sessions</a>
+    </div>
+    <div class="nav-link">
     <a 
     href="/instruments/new"
-    class=<%= title === 'Add Instrument to Booking' ? 'active' : '' %>>Add Instruments to Booking</a>
-    <a href="/sessions" class= <%= title === "My Sessions" ? "active" : "" %> >My Sessions</a>
+    class=<%= title === 'Add Instrument to Booking' ? 'active' : '' %>>Add Instruments </a></div>
+    <div class="nav-link">
+      <a href="/sessions" class= <%= title === "My Sessions" ? "active" : "" %> >My Sessions</a></div>
+    </div>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+        <button type="submit" id="logout-btn">Logout</button>
       </a>
     <% } else { %>
       <div 

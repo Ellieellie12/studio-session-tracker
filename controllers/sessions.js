@@ -1,14 +1,11 @@
 import { Session } from "../models/session.js";
 import { Instrument } from "../models/instrument.js";
 
-
 function newSession(req, res) {
   res.render('sessions/new', {
     title: 'Book a Session',
     })
   }
-
-
   
   function create(req, res) {
     req.body.personBooking = req.user.profile._id
@@ -22,8 +19,6 @@ function newSession(req, res) {
       res.redirect('/sessions')
     })
   }
-
-
 
 function index(req, res) {
   Session.find({})
@@ -46,23 +41,19 @@ function show(req, res) {
   .then(session => {
     Instrument.find({_id: {$nin: session.instruments}})
     .then(instruments => {
-    //get all the instruments from the instrument model and then pass that in the render as instruments and in order to do that i would need to have access to the instrument model and add a .then after that. nested .thens
-    console.log('this is a show session: ', session)
-        res.render('sessions/show',{
-          title: 'Session Detail',
-          session: session,
-          instruments: instruments,
-          currUserId: req.user.profile._id
-        })
-        }) 
+      res.render('sessions/show',{
+        title: 'Session Detail',
+        session: session,
+        instruments: instruments,
+        currUserId: req.user.profile._id
       })
+    }) 
+  })
   .catch(err => {
     console.log(err)
     res.redirect('/sessions')
   })
 }
-
-
 
 function deleteSession(req, res) {
   Session.findByIdAndDelete(req.params.sessionId)
@@ -78,7 +69,6 @@ function deleteSession(req, res) {
     res.redirect('/sessions')
   })
 }
-
 
 function edit(req, res) {
   Session.findById(req.params.sessionId)
@@ -132,8 +122,6 @@ function addInstrument(req, res) {
   })
 }
 
-
-
 export {
   newSession as new,
   create,
@@ -144,4 +132,3 @@ export {
   update,
   addInstrument
 }
-

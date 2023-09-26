@@ -12,22 +12,90 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #f6f6f6;
+  background-color: #000000;
+  color: #ffffff;
+  /* font-size: 20px; */
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
-  margin: 0;
+  /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+    'Helvetica Neue', sans-serif;   */
+    /* this is the font for the links in the nav */
 }
 
-nav {
-  background-color: #f6f6f6;
-  color: #1a1a1a;
+
+.studio-title {
   display: flex;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: system-ui;
+  color: rgb(255, 255, 255);
+  text-shadow: 5px 5px #558ABB
+}
+
+h2 {
+  margin:auto;
+  font-size: 45px;
+  font-family: 'Fuggles', cursive;
+  color: rgb(255, 255, 255);
+}
+nav {
+  display: flex;
+  background-color: rgb(145, 223, 235);
   align-items: center;
   padding: 10px;
   min-height: 60px;
+  /* width: 1; */
+} 
+
+/* nav a {
+  padding: 20px;
+}   */
+
+.nav-link {
+  padding: 25px ;
+  font-size: 40px;
+  font-family:'Fuggles', cursive; 
 }
+
+/* .nav-one {
+  padding: 25px 10px;
+}
+.nav-two {
+  padding: 25px 10px;
+}
+.nav-three{
+  padding: 25px 10px;
+} */
+
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.link-container {
+  display: flex;
+  margin-left: 30%;
+  /* padding: 30px; */
+  /* margin-right: 10%; */
+  /* margin-inline-start: auto; */
+} 
+
+
+/* body > nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end ;
+} */
+
+/* nav > a {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+} */
+
 
 main {
   display: flex;
@@ -39,3 +107,20 @@ main {
 .right {
   margin-left: auto;
 }
+
+#logout-btn {
+  background-color: transparent;
+  border: 1px solid #266DB6;
+  box-sizing: border-box;
+  color: #00132C;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+}
+
+#logout-btn:hover {
+  cursor: pointer;
+}
+
+
