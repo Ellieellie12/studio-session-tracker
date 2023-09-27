@@ -10,37 +10,45 @@
   </section>
   <section>
     <div class="details-for-session">
+      <div class="booking-detail">
       <div>Room: </div>
       <div><%= session.room %></div>
+      </div>
+      <div class="booking-detail">
       <div>Drinks: </div>
       <div><%= session.drink %></div>
+      </div>
+      <div class="booking-detail">
       <div>Snacks: </div>
       <div><%= session.snack %></div>
+      </div>
       <div> 
       </div>
+    </div>
       <a href="/sessions/<%= session._id %>/edit">
-        <button>Edit Session</button>
+        <button class="edit-btn">Edit Session</button>
     </a> 
-  </div>
-    <div> Instruments:</div>
+    <div class="instrument-choices">
+    <div class="label-instruments"> Instruments Added:</div>
     <ul>
       <% session.instruments.forEach(instrumentChoice => { %>
         <li><%= instrumentChoice.name %></li>
         <% }) %>
     </ul>
-  
+    
     <form id="add-to-instrument" action="/sessions/<%= session._id  %>/instruments" method="POST">
-    <select name="instrumentId">
-      <% instruments.forEach(instrument => { %>
-        <option value="<%= instrument._id %>"><%= instrument.name %></option>
-      <% }) %>
-    </select>
-    <button type="submit">Add Instrument</button>
-    </form>
-  <% } else { %>
-    <h1> Not Authorized </h1>
-  <% } %>
-  </section>
+      <select name="instrumentId" class="instruments-options">
+        <% instruments.forEach(instrument => { %>
+          <option value="<%= instrument._id %>"><%= instrument.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit" class="add-instrument-btn">Add Instrument</button>
+      </form>
+      <% } else { %>
+        <h1> Not Authorized </h1>
+        <% } %>
+      </div>
+      </section>
 </main>
   
 <%- include('../partials/footer') %>
