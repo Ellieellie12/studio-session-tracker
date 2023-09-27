@@ -21,7 +21,7 @@
             <td><%= session.room %></td>
             <td><%= session.drink %></td>
             <td><%= session.snack %></td>
-          <td ><a href="/sessions/<%= session._id %>">DETAILS</a></td> 
+          <td ><a href="/sessions/<%= session._id %>" class="detail-links">DETAILS</a></td> 
         </div>
           <td>
             <form action="/sessions/<%= session._id %>?_method=DELETE" method="POST">
