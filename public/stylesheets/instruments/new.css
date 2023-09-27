@@ -34,6 +34,8 @@ body {
   /* position: relative;  */
   /* display: block; */
   display: block;
+  margin-top: 7%;
+  margin-left: 30%;
 	width: 19em;
 	height: 3em;
   line-height: 2;
@@ -45,6 +47,10 @@ body {
   text-align: center;
 }
 
+.contact-message{
+  display: flex;
+  margin-top: 15%;
+}
 
 main {
   display: flex;
@@ -53,6 +59,11 @@ main {
   flex-direction: column;
 }
 
+ul li {
+margin-left: 35% ;
+margin-top: 20px;
+margin-bottom: 20px;
+}
 
 /* .right {
   margin-left: auto;

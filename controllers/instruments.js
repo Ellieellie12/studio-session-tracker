@@ -4,7 +4,7 @@ function newInstrument(req, res) {
     Instrument.find({})
     .then(instruments => {
       res.render('instruments/new', {
-        title: 'Add Instruments to Booking',
+        title: 'Instruments in the Studio',
         instruments: instruments,
       })
     })

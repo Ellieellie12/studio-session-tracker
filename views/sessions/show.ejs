@@ -5,21 +5,23 @@
 <main>
   <h1><%= title %></h1>
   <% if (session.personBooking._id.equals(currUserId)) { %>
-  <section>
+  <section class="thank-you-message">
     <p>Thank you for booking <%= session.personBooking.name %>...</p>
   </section>
   <section>
-    <div>Room: </div>
-    <div><%= session.room %></div>
-    <div>Drinks: </div>
-    <div><%= session.drink %></div>
-    <div>Snacks: </div>
-    <div><%= session.snack %></div>
-    <div> 
+    <div class="details-for-session">
+      <div>Room: </div>
+      <div><%= session.room %></div>
+      <div>Drinks: </div>
+      <div><%= session.drink %></div>
+      <div>Snacks: </div>
+      <div><%= session.snack %></div>
+      <div> 
+      </div>
       <a href="/sessions/<%= session._id %>/edit">
         <button>Edit Session</button>
-        </a> 
-    </div>
+    </a> 
+  </div>
     <div> Instruments:</div>
     <ul>
       <% session.instruments.forEach(instrumentChoice => { %>

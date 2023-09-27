@@ -1,4 +1,5 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sessions/index.css" />
 <%- include('../partials/nav') %>
 
 
@@ -17,10 +18,11 @@
       <% sessions.forEach(session => { %>
         <tr>
           <% if (session.personBooking.equals(user.profile._id)) { %>
-          <td><%= session.room %></td>
-          <td><%= session.drink %></td>
-          <td><%= session.snack %></td>
-          <td><a href="/sessions/<%= session._id %>">DETAILS</a></td>
+            <td><%= session.room %></td>
+            <td><%= session.drink %></td>
+            <td><%= session.snack %></td>
+          <td ><a href="/sessions/<%= session._id %>">DETAILS</a></td> 
+        </div>
           <td>
             <form action="/sessions/<%= session._id %>?_method=DELETE" method="POST">
               <button type="submit">Delete</button>
