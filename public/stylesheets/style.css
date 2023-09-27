@@ -33,8 +33,10 @@ body {
 
 h2 {
   margin:auto;
-  font-size: 45px;
-  font-family: 'Fuggles', cursive;
+  font-size: 25px;
+  font-family: 'Raleway Dots', cursive;
+  /* font-family: 'Major Mono Display', monospace; */
+  /* font-family: 'Fuggles', cursive; */
   color: rgb(255, 255, 255);
 }
 nav {
@@ -52,8 +54,12 @@ nav {
 
 .nav-link {
   padding: 25px ;
-  font-size: 40px;
-  font-family:'Fuggles', cursive; 
+  /* font-size: 40px; */
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Raleway Dots', cursive;
+  /* font-family: 'Major Mono Display', monospace; */
+  /* font-family:'Fuggles', cursive;  */
 }
 
 /* .nav-one {
@@ -75,7 +81,7 @@ a {
 
 .link-container {
   display: flex;
-  margin-left: 30%;
+  margin-left: 25%;
   /* padding: 30px; */
   /* margin-right: 10%; */
   /* margin-inline-start: auto; */
@@ -117,6 +123,7 @@ main {
   font-weight: 700;
   line-height: 24px;
   padding: 16px 23px;
+  font-family: 'Raleway Dots', cursive;
 }
 
 #logout-btn:hover {
