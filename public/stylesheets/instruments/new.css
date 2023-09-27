@@ -15,17 +15,36 @@ body {
   background-color: black;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+    'Helvetica Neue', sans-serif; */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Raleway Dots', cursive;
 }
 
-nav {
+/* nav {
   display: flex;
   background-color: rgb(145, 223, 235);
   align-items: center;
   padding: 10px;
   min-height: 60px;
+} */
+
+#instrument-dropdown {
+  /* position: relative;  */
+  /* display: block; */
+  display: block;
+	width: 19em;
+	height: 3em;
+  line-height: 2;
+	border-radius: 30em;
+	padding-bottom: 10px;
+	/* background: orange; */
+	outline: 4;
+	appearance: none;
+  text-align: center;
 }
+
 
 main {
   display: flex;
@@ -34,6 +53,7 @@ main {
   flex-direction: column;
 }
 
-.right {
+
+/* .right {
   margin-left: auto;
-}
+} */

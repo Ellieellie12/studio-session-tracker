@@ -14,14 +14,17 @@ html {
 body {
   background-color: black;
   color: #f6f6f6;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Raleway Dots', cursive; 
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
+    'Helvetica Neue', sans-serif; */
   
 }
 
 nav {
-  background-color: #f6f6f6;
+  background-color: rgb(145, 223, 235);
   color: #1a1a1a;
   display: flex;
   align-items: center;
@@ -35,6 +38,68 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+.session-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* justify-content: space-between; */
+  color: whitesmoke;
+  /* width:300px; */
+  /* margin:1em auto; */
+  position: relative;
+  cursor: pointer; 
+}
+
+#room-select {
+  position: relative; 
+  display: block;
+	width: 19em;
+	height: 3em;
+  line-height: 2;
+	border-radius: 30em;
+	padding-bottom: 10px;
+	/* background: orange; */
+	outline: 4;
+	appearance: none;
+  text-align: center;
+  /* font-size: 15px; */
+}
+
+
+#drink-select {
+  position: relative; 
+  display: block;
+	width: 19em;
+	height: 3em;
+  line-height: 2;
+	border-radius: 30em;
+	padding-bottom: 10px;
+	/* background: orange; */
+	outline: 4;
+	appearance: none;
+  text-align: center;
+  /* font-size: 15px; */
+}
+
+#snack-select {
+  position: relative; 
+  display: block;
+	width: 19em;
+	height: 3em;
+  line-height: 2;
+	border-radius: 30em;
+	padding-bottom: 10px;
+	/* background: orange; */
+	outline: 4;
+	appearance: none;
+  text-align: center;
+  /* font-size: 15px; */
+}
+
+
+
+
+
 
 .right {
   margin-left: auto;

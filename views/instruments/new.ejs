@@ -4,8 +4,8 @@
 
 <main>
 	<h1><%= title %></h1>
-  <p>Please first ensure that the Performer is not in the dropdown
-    <select>
+  <p>Please select the instruments you want added to your session:
+    <select id="instrument-dropdown">
       <% instruments.forEach(function(instrument) { %>
         <option><%= instrument.name %></option>
       <% }) %>
