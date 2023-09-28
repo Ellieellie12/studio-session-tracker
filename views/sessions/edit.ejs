@@ -7,17 +7,20 @@
   <% if (user) { %>
   <form id="new-form" action="/sessions/<%= session._id %>?_method=PUT" method="POST">
     <div class="session-container">
-    <label for="room-select">Rooms:</label>
-    <select name="room" id="room-select">
-      <option value="<%= session.room %>"><%= session.room %></option>
-      <option value="1">Room 1</option>
-      <option value="2">Room 2</option>
-      <option value="3">Room 3</option>
-      <option value="4">Room 4</option>
-      <option value="5">Room 5</option>
-      <option value="6">Room 6</option>
-      <option value="7">Room 7</option>
-    </select>
+      <div class="space-between">
+      <label for="room-select">Rooms:</label>
+      <select name="room" id="room-select">
+        <option value="<%= session.room %>"><%= session.room %></option>
+        <option value="1">Room 1</option>
+        <option value="2">Room 2</option>
+        <option value="3">Room 3</option>
+        <option value="4">Room 4</option>
+        <option value="5">Room 5</option>
+        <option value="6">Room 6</option>
+        <option value="7">Room 7</option>
+      </select>
+      </div>
+      <div class="space-between">
     <label for="drink-select">Drinks:</label>
     <select name="drink" id="drink-select">
       <option value="<%= session.drink %>"><%= session.drink %></option>
@@ -26,6 +29,8 @@
       <option value="Tea">Tea</option>
       <option value="Coffee">Coffee</option>
     </select>
+    </div>
+    <div class="space-between">
     <label for="snack-select">Snacks:</label>
     <select name="snack" id="snack-select">
       <option value="<%= session.snack %>"><%= session.snack %></option>
@@ -34,6 +39,7 @@
       <option value="Fruit Bowl">Fruit Bowl</option>
       <option value="Trail Mix">Trail Mix</option>
     </select>
+    </div>
     <button type="submit" class="save-btn">Save Session</button>
   </div>
   </form>

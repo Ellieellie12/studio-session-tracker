@@ -4,8 +4,8 @@
 
 <main>
 	<h1><%= title %></h1>
-  <p>Please review the instruments the studio has avaiable beforehand:
-    <select id="instrument-dropdown">
+  <p class="review-message">Please review the instruments the studio has avaiable beforehand:
+    <select class="instrument-dropdown">
       <% instruments.forEach(function(instrument) { %>
         <option><%= instrument.name %></option>
         <% }) %>
@@ -14,8 +14,8 @@
     <div class="contact-message">
       <ul>
         If you have any special requests for instruments you don't see available in the drop down menu please feel free to contact us at:
-        <li> glass_studios@thestudioforyou.com </li>
         <li> Office Number: 551-555-5555 Ext: 5525</li>
+        <li> glass_studios@thestudioforyou.com </li>
       </ul>
     </div>
     <!-- <button type="submit">Add Instruments</button> -->

@@ -18,19 +18,25 @@ body {
   /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif; */
     /* color: black; */
+    color: white;
     font-size: 20px;
-    font-weight: bold;
-    font-family: 'Raleway Dots', cursive;
+    /* font-weight: bold; */
+    font-family: system-ui;
+    /* font-family: 'Raleway Dots', cursive; */
 }
 
-nav {
-  background-color: rgb(145, 223, 235);
-  /* background-color: #f6f6f6;  */
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  min-height: 60px;
+h1 {
+  font-family: 'Raleway Dots', cursive; 
 }
+
+/* nav {
+  /* background-color: rgb(145, 223, 235); */
+  /* background-color: #f6f6f6;  */
+  /* display: flex;
+  align-items: center;
+  /* padding: 10px; */
+  /* min-height: 60px;
+} */ 
 
 /* a {
   color: black;
@@ -47,12 +53,14 @@ nav {
 
 table, th, td {
   border: 2px solid;
-  color: white;
-  /* width: 40%; */
+  border-width: 5px;
+  color: rgb(122, 81, 154);
+  width: 10%;
   text-align: center;
-  /* border-spacing: 12px; */
   
 }
+
+/* color: rgb(122, 81, 154); */
 
 
 th {
@@ -62,17 +70,6 @@ th,td {
   padding: 10px;
   border-bottom: 1px solid white; }
 
-
-
-
-
-/* table {
-  background-color:rgb(64, 61, 61);
-}
-
-tbody {
-  background-color: black;
-} */
 table {
   border-collapse: collapse;
   border-spacing: 10px 10px;
@@ -82,20 +79,10 @@ table {
 .delete-btn {
   font-family: system-ui;
   font-style: italic;
-
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 4px;
   background-color: rgb(91, 239, 170);
   border: none;
-
 }
-/* main { */
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
-/* } */
 
-/* .right {
-  margin-left: auto;
-} */

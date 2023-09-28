@@ -2,22 +2,13 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
-  box-sizing: inherit;
-}
-
 body {
-  background-color: black;
-  color: #f6f6f6;
+  /* background-color: black; */
+  /* color: #f6f6f6; */
   /* Use a system font, if none are available use any found sans-sarif font */
   /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif; */
-    font-size: 25px;
+    font-size: 21px;
     font-weight: bold;
   
     /* font-family: system-ui; */
@@ -48,7 +39,7 @@ nav {
   color: whitesmoke;
   /* width:300px; */
   /* margin:1em auto; */
-  position: relative;
+  /* position: relative; */
   cursor: pointer;  
   
 }
@@ -73,14 +64,13 @@ nav {
 	width: 19em;
 	height: 3em;
   /* line-height: 2; */
-	border-radius: 30em;
+	/* border-radius: 30em; */
 	padding-bottom: 10px;
 	/* background: orange; */
 	outline: 4;
-	appearance: none;
   text-align: center;
   font-family: system-ui;
-  font-size: 20px;
+  font-size: 18px;
   /* font-size: 15px; */
 }
 
@@ -96,14 +86,13 @@ nav {
 	width: 19em;
 	height: 3em;
   /* line-height: 2; */
-	border-radius: 30em;
+	/* border-radius: 30em; */
 	padding-bottom: 10px;
 	/* background: orange; */
 	outline: 4;
-	appearance: none;
   text-align: center;
   font-family: system-ui;
-  font-size: 20px;
+  font-size: 18px;
 
 
 }
@@ -114,19 +103,18 @@ nav {
 	width: 19em;
 	height: 3em;
   /* line-height: 2; */
-	border-radius: 30em;
+	/* border-radius: 30em; */
 	padding-bottom: 10px;
 	/* background: orange; */
-	outline: 4;
-  font-size: 20px;
-	appearance: none;
+	/* outline: 4; */
+  font-size: 18px;
   text-align: center;
   font-family: system-ui;
   /* font-weight: bold; */
   
 }
 
-#add-session-btn {
+/* #add-session-btn {
   margin-top: 40px;
   padding: 10px;
   appearance: button;
@@ -139,10 +127,8 @@ nav {
   cursor: pointer;
   display: inline-block;
   font-family: system-ui;
-  /* font-family: din-round,sans-serif; */
   font-size: 15px;
   font-weight: bold;
-  /* font-weight: 700; */
   letter-spacing: .8px;
   line-height: 20px;
   outline: none;
@@ -151,21 +137,40 @@ nav {
   text-align: center;
   text-transform: uppercase;
   touch-action: manipulation;
-  /* transform: translateZ(0); */
   transition: filter .2s;
   user-select: none;
-  /* -webkit-user-select: none; */
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
-
-
-
-}
+} */
   /* change the div in the newejs at the bottom possible when working on changing this button 
+
+
 
 
 
 /* .right {
   margin-left: auto;
 } */
+
+.add-session-btn {
+  font-family: system-ui;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid black;
+  /* box-sizing: border-box; */
+  border-radius: 12px;
+  margin-top: 15px;
+  padding: 7px 7px;
+  color: #00132C;
+  line-height: 24px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 25%;
+  cursor: pointer;  
+}
+
+.add-session-btn:hover {
+  background-color:#864ec2;
+  transition: 0.7s;
+}

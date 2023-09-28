@@ -40,13 +40,16 @@
         <li><%= instrumentChoice.name %></li>
         <% }) %>
     </ul>
-    
+  </div>
+  <div class="dropdown-for-instruments">
     <form id="add-to-instrument" action="/sessions/<%= session._id  %>/instruments" method="POST">
       <select name="instrumentId" class="instruments-options">
         <% instruments.forEach(instrument => { %>
           <option value="<%= instrument._id %>"><%= instrument.name %></option>
           <% }) %>
         </select>
+      </div>
+      <div class="center-add-btn">
         <button type="submit" class="add-instrument-btn">Add Instrument</button>
       </form>
       <% } else { %>

@@ -6,14 +6,13 @@
   <nav>
     <div class="link-container">
       <div class="nav-link">
-    <a href="/sessions/new" class= <%= title === "Book Sessions" ? "active" : "" %> >Book Sessions</a>
+    <a href="/sessions/new">Book Sessions</a>
     </div>
     <div class="nav-link">
     <a 
-    href="/instruments/new"
-    class=<%= title === 'Instruments in the Studio' ? 'active' : '' %>> Instruments </a></div>
+    href="/instruments/new"> Instruments </a></div>
     <div class="nav-link">
-      <a href="/sessions" class= <%= title === "My Sessions" ? "active" : "" %> >My Sessions</a></div>
+      <a href="/sessions">My Sessions</a></div>
 
     </div>
       <% if (user) { %>

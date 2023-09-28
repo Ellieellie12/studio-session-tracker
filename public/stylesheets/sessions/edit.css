@@ -2,18 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
-  box-sizing: inherit;
-}
-
 body {
-  background-color: black;
-  color: #f6f6f6;
+  /* background-color: black; */
+  /* color: #f6f6f6; */
   font-size: 22px;
   font-weight: bold;
   font-family: 'Raleway Dots', cursive; 
@@ -23,32 +14,36 @@ body {
   
 }
 
-nav {
-  background-color: rgb(145, 223, 235);
-  color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  min-height: 60px;
-}
+/* nav {
+  /* background-color: rgb(145, 223, 235); */
+  /* color: #1a1a1a; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* padding: 10px; */
+  /* min-height: 60px; */
+/* } */
 
-main {
+/* main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+} */
 .session-container {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  /* justify-content: space-between; */
+  /* padding: 10px; */
   color: whitesmoke;
   /* width:300px; */
   /* margin:1em auto; */
-  position: relative;
+  /* position: relative; */
   cursor: pointer; 
 }
+
+.space-between {
+padding: 20px;
+}
+
 
 #room-select {
   position: relative; 
@@ -56,14 +51,13 @@ main {
 	width: 19em;
 	height: 3em;
   line-height: 2;
-	border-radius: 30em;
-	padding-bottom: 10px;
-  font-size: 20px;
+	
+  font-size: 18px;
   font-family: system-ui;
   /* font-family: system-ui; */
 	/* background: orange; */
-	outline: 4;
-	appearance: none;
+	/* outline: 4; */
+
   text-align: center;
   /* font-size: 15px; */
 }
@@ -72,73 +66,42 @@ main {
 #drink-select {
   position: relative; 
   display: block;
+  font-size: 18px;
+  font-family: system-ui;
 	width: 19em;
 	height: 3em;
   line-height: 2;
-	border-radius: 30em;
-	padding-bottom: 10px;
-  font-family: system-ui;
-	/* background: orange; */
-	outline: 4;
-	appearance: none;
+	/* margin-top: 20px; */
   text-align: center;
-  font-size: 20px;
-  /* font-size: 15px; */
+  /* font-size: 20px; */
 }
 
 #snack-select {
-  position: relative; 
+  /* position: relative;  */
+  font-size: 18px;
+  font-family: system-ui;
+  text-align: center;
   display: block;
 	width: 19em;
 	height: 3em;
   line-height: 2;
-	border-radius: 30em;
-	padding-bottom: 10px;
-	outline: 4;
-	appearance: none;
-  font-size: 20px;
-  text-align: center;
-  font-family: system-ui;
-  /* font-size: 15px; */
 }
 
 
 .save-btn {
-  /* padding: 20px; */
-  /* margin-left: 40%; */
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
-  
-  /* padding: 10px; */
-  /* appearance: button; */
-  background-color: whitesmoke;
-  /* border: solid transparent; */
-  border-radius: 16px;
-  /* border-width: 2px 2px 4px; */
-  /* box-sizing: border-box; */
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  /* display: inline-block; */
   font-family: system-ui;
-  /* font-family: din-round,sans-serif; */
-  font-size: 15px;
-  /* font-weight: bold; */
-  /* font-weight: 700; */
-  letter-spacing: .8px;
-  
-  padding: 12px 15px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  /* transform: translateZ(0); */
-  transition: filter .2s;
-
-}
-
-
-
-
-.right {
-  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid black;
+  /* box-sizing: border-box; */
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 7px 7px;
+  color: #00132C;
+  line-height: 24px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 26%;
+  margin-right: 30%;
+  cursor: pointer;  
 }
