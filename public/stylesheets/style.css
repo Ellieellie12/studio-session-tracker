@@ -32,18 +32,31 @@ body {
 }
 
 h2 {
-  margin:auto;
-  font-size: 25px;
+  margin-bottom: 20%;
+  /* margin:auto; */
+  font-size: 35px;
+  /* font-weight: bold; */
   font-family: 'Raleway Dots', cursive;
   /* font-family: 'Major Mono Display', monospace; */
   /* font-family: 'Fuggles', cursive; */
   color: rgb(255, 255, 255);
 }
+
+h3 {
+  font-family:'Raleway Dots', cursive;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
 nav {
+  /* font-family:'Raleway Dots', 
+  cursive;  */
+  font-family: system-ui;
   /* color: black; */
   display: flex;
+  /* justify-content: center; */
   background-color: rgb(145, 223, 235);
-  align-items: center;
+  /* align-items: center; */
   padding: 10px;
   min-height: 60px;
   /* width: 1; */
@@ -53,56 +66,53 @@ nav {
   padding: 20px;
 }   */
 
+.link-container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center;
+  justify-content: center; */
+  /* margin-left: 43%; */ 
+  margin: auto; 
+  /* margin-left: 40%; */
+  /* color: black; */
+  /* padding: 30px; */
+  margin-right: -3%;
+  /* margin-inline-start: auto; */
+} 
+
+
+/* .all-nav-links {
+  display: flex;
+  flex-direction: row;
+} */
+
 .nav-link {
-  padding: 25px ;
-  /* font-size: 40px; */
+  padding: 25px;
+  /* font-size: 40px;  */
   font-weight: bold;
-  font-size: 30px;
-  font-family: 'Raleway Dots', cursive;
+  /* font-style: italic; */
+  font-size: 32px;
+  /* font-family: 'Tauri', sans-serif; */
+  /* font-family: system-ui;
+  text-shadow: 5px 5px #6bb4f0; */
+
+
+  /* font-family: 'Raleway Dots', cursive; */
   /* font-family: 'Major Mono Display', monospace; */
   /* font-family:'Fuggles', cursive;  */
 }
-
-/* .nav-one {
-  padding: 25px 10px;
-}
-.nav-two {
-  padding: 25px 10px;
-}
-.nav-three{
-  padding: 25px 10px;
-} */
 
 
 
 a {
   color: black;
   text-decoration: none;
+  /* font-size: 40px; */
+
+  /* padding: 40px; */
+  /* align-items: center;
+  justify-content: center; */
 }
-
-.link-container {
-  display: flex;
-  margin-left: 35%;
-  /* color: black; */
-  /* padding: 30px; */
-  /* margin-right: 10%; */
-  /* margin-inline-start: auto; */
-} 
-
-
-/* body > nav {
-  grid-area: nav;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end ;
-} */
-
-/* nav > a {
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  align-items: center;
-} */
 
 
 main {

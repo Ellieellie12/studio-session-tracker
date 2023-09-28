@@ -58,6 +58,9 @@ main {
   line-height: 2;
 	border-radius: 30em;
 	padding-bottom: 10px;
+  font-size: 20px;
+  font-family: system-ui;
+  /* font-family: system-ui; */
 	/* background: orange; */
 	outline: 4;
 	appearance: none;
@@ -74,10 +77,12 @@ main {
   line-height: 2;
 	border-radius: 30em;
 	padding-bottom: 10px;
+  font-family: system-ui;
 	/* background: orange; */
 	outline: 4;
 	appearance: none;
   text-align: center;
+  font-size: 20px;
   /* font-size: 15px; */
 }
 
@@ -89,14 +94,47 @@ main {
   line-height: 2;
 	border-radius: 30em;
 	padding-bottom: 10px;
-	/* background: orange; */
 	outline: 4;
 	appearance: none;
+  font-size: 20px;
   text-align: center;
+  font-family: system-ui;
   /* font-size: 15px; */
 }
 
 
+.save-btn {
+  /* padding: 20px; */
+  /* margin-left: 40%; */
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  
+  /* padding: 10px; */
+  /* appearance: button; */
+  background-color: whitesmoke;
+  /* border: solid transparent; */
+  border-radius: 16px;
+  /* border-width: 2px 2px 4px; */
+  /* box-sizing: border-box; */
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  /* display: inline-block; */
+  font-family: system-ui;
+  /* font-family: din-round,sans-serif; */
+  font-size: 15px;
+  /* font-weight: bold; */
+  /* font-weight: 700; */
+  letter-spacing: .8px;
+  
+  padding: 12px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  /* transform: translateZ(0); */
+  transition: filter .2s;
+
+}
 
 
 

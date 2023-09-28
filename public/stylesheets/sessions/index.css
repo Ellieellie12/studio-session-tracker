@@ -32,10 +32,10 @@ nav {
   min-height: 60px;
 }
 
-a {
+/* a {
   color: black;
   text-decoration: none;
-}
+} */
 
 /* a {
   color: whitesmoke;
@@ -44,6 +44,51 @@ a {
 .detail-links{
   color: white;
 }
+
+table, th, td {
+  border: 2px solid;
+  color: white;
+  /* width: 40%; */
+  text-align: center;
+  /* border-spacing: 12px; */
+  
+}
+
+
+th {
+  height: 30px;
+}
+th,td {
+  padding: 10px;
+  border-bottom: 1px solid white; }
+
+
+
+
+
+/* table {
+  background-color:rgb(64, 61, 61);
+}
+
+tbody {
+  background-color: black;
+} */
+table {
+  border-collapse: collapse;
+  border-spacing: 10px 10px;
+  width: 50%;
+}
+
+.delete-btn {
+  font-family: system-ui;
+  font-style: italic;
+
+  font-size: 15px;
+  border-radius: 4px;
+  background-color: rgb(91, 239, 170);
+  border: none;
+
+}
 /* main { */
   /* display: flex;
   align-items: center;
@@ -51,6 +96,6 @@ a {
   flex-direction: column; */
 /* } */
 
-.right {
+/* .right {
   margin-left: auto;
-}
+} */
