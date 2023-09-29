@@ -4,7 +4,7 @@
 
 Glass Studios is a home away from home. We provide our clientele with state of the art equipment and most importantly the atmosphere needed to create. Our company welcomes you to come and express yourself in a studio that was made for you.
 
-Description: Glass Studios is a user friendly full stack web application created to track studio sessions. 
+Description: Glass Studios is a user friendly full stack web application created to track studio sessions.
 
 # Getting Started:
 Click this link to explore & hopefully one day book with us: https://ea-studio-session-tracker.fly.dev
