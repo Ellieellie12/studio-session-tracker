@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 
 const sessionSchema = new Schema({
   room: {
-    type: Number, min:1, max:7},
+    type: Number, min:1, max:7
+  },
   drink: {
     type: String, 
     enum:['Bottled Water', 'Sparkling Water', 'Tea', 'Coffee']
@@ -13,14 +14,17 @@ const sessionSchema = new Schema({
     type: String,
     enum:['Cookies', 'Chips','Fruit Bowl', 'Trail Mix']
   },
-  personBooking: {type: Schema.Types.ObjectId, ref: 'Profile'},
+  personBooking: {
+    type: Schema.Types.ObjectId, 
+    ref: 'Profile'
+  },
   instruments: [{
-    type: Schema.Types.ObjectId, ref: 'Instrument'
+    type: Schema.Types.ObjectId, 
+    ref: 'Instrument'
   }], 
   }, {
   timestamps: true
 })
-
 
 const Session = mongoose.model('Session', sessionSchema)
 

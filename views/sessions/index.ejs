@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="/stylesheets/sessions/index.css" />
 <%- include('../partials/nav') %>
 
-
 <main>
   <h1>My Sessions</h1>
   <% if (user) %>
@@ -14,7 +13,7 @@
         <th>Snacks</th>
         <th>About Your Session</th>
         <th>Delete Session</th>
-      </thead>
+    </thead>
       <tbody>
         <% sessions.forEach(session => { %>
           <tr>

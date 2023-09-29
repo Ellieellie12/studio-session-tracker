@@ -8,21 +8,15 @@
     <select class="instrument-dropdown">
       <% instruments.forEach(function(instrument) { %>
         <option><%= instrument.name %></option>
-        <% }) %>
-      </select>
-    </p>
+      <% }) %>
+    </select>
+  </p>
     <div class="contact-message">
-      <ul>
-        If you have any special requests for instruments you don't see available in the drop down menu please feel free to contact us at:
+      <ul>If you have any special requests for instruments you don't see available in the drop down menu please feel free to contact us at:
         <li> Office Number: 551-555-5555 Ext: 5525</li>
         <li> glass_studios@thestudioforyou.com </li>
       </ul>
     </div>
-    <!-- <button type="submit">Add Instruments</button> -->
-  <!-- <form id="add-instrument-form" action="/instruments" method="POST">
-    <label for="name-input">Instruments:</label>
-    <input type="text" name="name" id="name-input">
-  </form> -->
 </main>
 
 <%- include('../partials/footer') %>

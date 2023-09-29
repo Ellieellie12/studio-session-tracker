@@ -10,52 +10,46 @@
   </section>
   <section>
     <div class="details-for-session">
-
       <div class="booking-detail">
-      <div>Room: </div>
-      <div class="space"><%= session.room %></div>
+        <div>Room: </div>
+        <div class="space"><%= session.room %></div>
       </div>
-
       <div class="booking-detail">
-      <div>Drinks: </div>
-      <div class="space"><%= session.drink %></div>
+        <div>Drinks: </div>
+        <div class="space"><%= session.drink %></div>
       </div>
-
       <div class="booking-detail">
-      <div>Snacks:</div>
-      <div class="space"><%= session.snack %></div>
+        <div>Snacks:</div>
+        <div class="space"><%= session.snack %></div>
       </div>
-
     </div>
-  <!-- </div> -->
-      <!-- <div>  -->
-      <a href="/sessions/<%= session._id %>/edit">
-        <button class="edit-btn">Edit Session</button>
+    <a href="/sessions/<%= session._id %>/edit">
+      <button class="edit-btn">Edit Session</button>
     </a> 
     <hr class="solid"> 
     <div class="instrument-choices">
-    <div> Instruments Added:</div>
-    <ul>
+      <div> Instruments Added:</div>
+      <ul>
       <% session.instruments.forEach(instrumentChoice => { %>
         <li><%= instrumentChoice.name %></li>
-        <% }) %>
-    </ul>
-  </div>
-  <div class="dropdown-for-instruments">
-    <form id="add-to-instrument" action="/sessions/<%= session._id  %>/instruments" method="POST">
-      <select name="instrumentId" class="instruments-options">
-        <% instruments.forEach(instrument => { %>
-          <option value="<%= instrument._id %>"><%= instrument.name %></option>
+      <% }) %>
+      </ul>
+    </div>
+    <div class="dropdown-for-instruments">
+      <form id="add-to-instrument" action="/sessions/<%= session._id  %>/instruments" method="POST">
+        <select name="instrumentId" class="instruments-options">
+          <% instruments.forEach(instrument => { %>
+            <option value="<%= instrument._id %>"><%= instrument.name %></option>
           <% }) %>
         </select>
-      </div>
-      <div class="center-add-btn">
-        <button type="submit" class="add-instrument-btn">Add Instrument</button>
+    </div>
+        <div class="center-add-btn">
+          <button type="submit" class="add-instrument-btn">Add Instrument</button>
+        </div>
       </form>
-      <% } else { %>
-        <h1> Not Authorized </h1>
+        <% } else { %>
+          <h1> Not Authorized </h1>
         <% } %>
-      </div>
   </section>
 </main>
   
