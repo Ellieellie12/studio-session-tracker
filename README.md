@@ -21,7 +21,7 @@ Planning Materials for Glass Studios: https://trello.com/invite/b/n8JZzk3j/ATTI1
  * https://icons8.com/
  * https://fonts.google.com/
 
- Technologies Used:
+ ## Technologies Used:
  * JavaScript
  * HTML
  * CSS
