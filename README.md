@@ -6,11 +6,17 @@ Glass Studios is a home away from home. We provide our clientele with state of t
 
 Description: Glass Studios is a user friendly full stack web application created to track studio sessions.
 
+
 # Getting Started:
 Click this link to explore & hopefully one day book with us: https://ea-studio-session-tracker.fly.dev
 
 Planning Materials for Glass Studios: https://trello.com/invite/b/n8JZzk3j/ATTI1489ecd391753395019e42813f1b813d34E25566/studio-session-tracker-1
 
+## Features:
+* Users can add a room, drink, and snack of choice to their session packages.
+* Users can add instruments to their session packages.
+* Users can update their session packages.
+* Users can delete their session packages.
 ## Attributions: 
  * https://icons8.com/
  * https://fonts.google.com/
@@ -24,6 +30,8 @@ Planning Materials for Glass Studios: https://trello.com/invite/b/n8JZzk3j/ATTI1
  * Express JS
  * Google OAuth
  * Fly.io
+ * Git
+ * Github 
 
  ## Future Plans For Glass Studios:
  * Implement a view that has the prices for each session package.
