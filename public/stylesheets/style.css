@@ -2,25 +2,10 @@ html {
   box-sizing: border-box;
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
-  box-sizing: inherit;
-}
-
 body {
   background-color: #000000;
   color: #ffffff;
-  /* font-size: 20px; */
-  /* Use a system font, if none are available use any found sans-sarif font */
-  /* font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;   */
-    /* this is the font for the links in the nav */
 }
-
 
 .studio-title {
   display: flex;
@@ -33,23 +18,14 @@ body {
 
 h2 {
   margin-bottom: 18%;
-  /* margin:auto; */
   font-size: 24px;
-  /* font-weight: bold; */
   font-family: 'Raleway Dots', cursive;
-  /* font-family: 'Major Mono Display', monospace; */
-  /* font-family: 'Fuggles', cursive; */
   color: rgb(255, 255, 255);
 }
 
 .studio-message {
-  
   font-family: system-ui;
   font-size: 20px;
-
-  /* margin: auto; */
-  /* font-family: 'Raleway Dots', cursive; */
-  /* margin-top: 20%; */
 }
 
 h3 {
@@ -57,77 +33,31 @@ h3 {
   margin-top: 30px;
   font-size: 19px;
   margin: auto;
-  /* margin-right: 10%; */
 }
 
 nav {
-  /* font-family:'Raleway Dots', 
-  cursive;  */
   font-family: system-ui;
-  /* color: black; */
   display: flex;
-  /* justify-content: center; */
   background-color: rgb(145, 223, 235);
-  /* align-items: center; */
   padding: 5px;
-  /* min-height: 60px; */
-  /* width: 1; */
 } 
-
-/* nav a {
-  padding: 20px;
-}   */
 
 .link-container {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center;
-  justify-content: center; */
-  /* margin-left: 43%; */ 
-  /* margin: auto;  */
-  /* margin-left: 40%; */
-  /* color: black; */
-  /* padding: 30px; */
   margin-right: -3%;
-  /* margin-inline-start: auto; */
 } 
-
-
-/* .all-nav-links {
-  display: flex;
-  flex-direction: row;
-} */
 
 .nav-link {
   display: flex;
-  
   padding: 20px;
-  /* font-size: 40px;  */
   font-weight: bold;
-  /* font-style: italic; */
   font-size: 20px;
-  /* font-family: 'Tauri', sans-serif; */
-  /* font-family: system-ui;
-  text-shadow: 5px 5px #6bb4f0; */
-
-
-  /* font-family: 'Raleway Dots', cursive; */
-  /* font-family: 'Major Mono Display', monospace; */
-  /* font-family:'Fuggles', cursive;  */
 }
-
-
 
 a {
   color: black;
   text-decoration: none;
-  /* font-size: 40px; */
-
-  /* padding: 40px; */
-  /* align-items: center;
-  justify-content: center; */
 }
-
 
 main {
   display: flex;
@@ -146,7 +76,6 @@ main {
   font-weight: 700;
   background-color: white;
   border: 1px solid #266DB6;
-  /* box-sizing: border-box; */
   border-radius: 12px;
   margin-top: 10px;
   padding: 5px 5px;
@@ -158,5 +87,3 @@ main {
 #logout-btn:hover {
   cursor: pointer;
 }
-
-
