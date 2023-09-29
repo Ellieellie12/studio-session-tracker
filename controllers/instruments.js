@@ -1,24 +1,24 @@
 import { Instrument } from '../models/instrument.js'
 
 function newInstrument(req, res) {
-    Instrument.find({})
-    .then(instruments => {
-      res.render('instruments/new', {
-        title: 'Instruments in the Studio',
-        instruments: instruments,
-      })
+  Instrument.find({})
+  .then(instruments => {
+    res.render('instruments/new', {
+      title: 'Instruments in the Studio',
+      instruments: instruments,
     })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/sessions')
-    })
-  }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/sessions')
+  })
+}
 
 function create(req, res) {
   Instrument.create(req.body)
-  .then(instrument =>{
+  .then(instrument => {
     res.redirect('/instruments/new')
-  } )
+  })
 }
 
 export {

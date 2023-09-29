@@ -4,21 +4,21 @@ import { Instrument } from "../models/instrument.js";
 function newSession(req, res) {
   res.render('sessions/new', {
     title: 'Book a Session',
-    })
-  }
+  })
+}
   
-  function create(req, res) {
-    req.body.personBooking = req.user.profile._id
-    Session.create(req.body)
-    .then(session => {
-      console.log('this is the create session: ', session)
-      res.redirect(`/sessions/${session._id}`)
-    })
-    .catch(err=> {
-      console.log(err)
-      res.redirect('/sessions')
-    })
-  }
+function create(req, res) {
+  req.body.personBooking = req.user.profile._id
+  Session.create(req.body)
+  .then(session => {
+    console.log('this is the create session: ', session)
+    res.redirect(`/sessions/${session._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/sessions')
+  })
+}
 
 function index(req, res) {
   Session.find({})
@@ -28,7 +28,7 @@ function index(req, res) {
       title: 'My Sessions'
     })
   })
-  .catch(err=> {
+  .catch(err => {
     console.log(err)
     res.redirect('/sessions')
   })
@@ -37,7 +37,7 @@ function index(req, res) {
 function show(req, res) {
   console.log(req.user.profile._id)
   Session.findById(req.params.sessionId)
-  .populate(['instruments', 'personBooking' ])
+  .populate(['instruments', 'personBooking'])
   .then(session => {
     Instrument.find({_id: {$nin: session.instruments}})
     .then(instruments => {
@@ -47,6 +47,10 @@ function show(req, res) {
         instruments: instruments,
         currUserId: req.user.profile._id
       })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/sessions')
     }) 
   })
   .catch(err => {
@@ -64,7 +68,7 @@ function deleteSession(req, res) {
       throw new Error('Not Authorized')
     }
   })
-  .catch(err=> {
+  .catch(err => {
     console.log(err)
     res.redirect('/sessions')
   })
@@ -74,15 +78,15 @@ function edit(req, res) {
   Session.findById(req.params.sessionId)
   .then(session => {
     if (session.personBooking.equals(req.user.profile._id)) {
-    res.render('sessions/edit', {
-      session,
-      title:'Edit Session'
-    })
+      res.render('sessions/edit', {
+        session,
+        title:'Edit Session'
+      })
     } else {
       throw new Error('Not Authorized')
     }
   })
-  .catch(err=> {
+  .catch(err => {
     console.log(err)
     res.redirect('/sessions')
   })
@@ -99,7 +103,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-      res.redirect('/sessions/')
+    res.redirect('/sessions/')
   })
 }
 
