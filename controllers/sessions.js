@@ -11,7 +11,6 @@ function create(req, res) {
   req.body.personBooking = req.user.profile._id
   Session.create(req.body)
   .then(session => {
-    console.log('this is the create session: ', session)
     res.redirect(`/sessions/${session._id}`)
   })
   .catch(err => {
@@ -35,7 +34,6 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  console.log(req.user.profile._id)
   Session.findById(req.params.sessionId)
   .populate(['instruments', 'personBooking'])
   .then(session => {
@@ -95,7 +93,7 @@ function edit(req, res) {
 function update(req, res) {
   Session.findByIdAndUpdate(req.params.sessionId, req.body, {new:true})
   .then(session => {
-    if (session.personBooking.equals(req.user.profile)) {
+    if (session.personBooking.equals(req.user.profile._id)) {
       res.redirect(`/sessions/${session._id}`)
     } else {
       throw new Error('Not authorized')

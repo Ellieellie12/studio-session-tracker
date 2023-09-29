@@ -1,9 +1,9 @@
 # Glass Studios: "Where Timeless Music Is Made"
-Description: "Glass Studios" is an easy to use full stack web application created to track studio sessions that are booked by clientele.
 
 Glass Studios is a studio for the people welcoming anyone to come and express themselves and what better way to do it in a place that feels like home. You were given a voice and we want to make sure that it's not kept inside.
 Our company takes pride in providing our clientele a home away from home.
 
+Description: "Glass Studios" is an easy to use full stack web application created to track studio sessions that are booked by clientele.
 
 # Getting Started:
 Click this link to explore & hopefully one day book with us: https://ea-studio-session-tracker.fly.dev

@@ -10,7 +10,7 @@ router.post('/', isLoggedIn, sessionsCtrl.create)
 router.get('/:sessionId', isLoggedIn, sessionsCtrl.show)
 router.get('/:sessionId/edit', isLoggedIn, sessionsCtrl.edit)
 router.put('/:sessionId', isLoggedIn, sessionsCtrl.update)
-router.post('/:sessionId/instruments', sessionsCtrl.addInstrument)
+router.post('/:sessionId/instruments', isLoggedIn, sessionsCtrl.addInstrument)
 router.delete('/:sessionId', isLoggedIn, sessionsCtrl.delete)
 
 export {
