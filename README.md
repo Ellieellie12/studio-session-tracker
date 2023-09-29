@@ -32,6 +32,7 @@ Planning Materials for Glass Studios: https://trello.com/invite/b/n8JZzk3j/ATTI1
  * Fly.io
  * Git
  * Github 
+ * Passport.js
 
  ## Future Plans For Glass Studios:
  * Implement a view that has the prices for each session package.
